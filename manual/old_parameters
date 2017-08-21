@@ -1,0 +1,32 @@
+TEMPO 1.7E-4;     ! total time period for simulation, [s]
+NIBSruns 200;     ! Num. of step bins (how many times the IBS is calculated during the whole running for multi-turn or arbitrary tracking time!)
+oneturn 0;            ! 1 -> single turn tracking, 0 -> multi-turn
+fastrun 1;               ! 1 -> interpolation is applied for each time step (?) < close for tail study?
+nturnstostudy 40000000;     ! total num of turns
+checktime 1;          ! 1 -> "nturnstostudy" make sense, 0->TEMPO decide the total simulation time
+epsx 0.360875E-9;     ! initial horizontal emittance, [m]
+epsz 0.360875E-9;     ! initial vertical emittance, [m]
+delta 0.00009046076;     ! initial rms. energy spread
+deltas 0.0749481145;          ! initial rms. bunch length in meter
+dtimex 1.164507575E+05;         ! horizontal damping time, [s] or [hour]?
+dtimez 1.164507575E+05;         ! vertical damping time
+dtimes 5.822537875E+04;        ! longitudinal damping time
+eqx 9.474415332E-14;               ! Equilibrium horizontal emittance [m]?
+eqz 1.5510998E-16;                   ! Equilibrium vertical emittance [m]
+eqdelta 1.335630356E-06;       ! Equilibrium rms. energy spread
+eqdeltas 0.001088409561;       ! Equilibrium rms. bunch length [m]
+flag_rec 1;                                  !  0 -> full lattice, 1 -> reduced num of perturbation points in lattice
+damping 1;                                 ! 0 -> no radiation damping, 1 -> RAD on
+IBSflag 1;                                    ! 0 -> no IBS calculation (or tracking?), 1 -> include IBS calculation
+q_ex 1;                                        ! 0 -> NOFLUC, 1 -> with quantum fluctuation
+momentum 6500000;              ! in [MeV]
+numbunch 1.1E11;                        ! bunch population
+numpart 175000;                       ! Num. of macro-particles generated
+ncellx 20;                                   ! Num. of cells, horizontally
+ncellz 40;                                   ! Num. of cells, vertically
+ncells 350;                                 ! Num. of cells, longitudinally
+nsigmas %%Ncsig;                     ! ?
+ncollisions 1;                              ! collisions per particle (in one cell per time step? or accumulated value?)
+convsteadystate 0;                   ! 1 -> tracking stops until/when reach stead-state (equilibrium)
+particle 1;                                  ! 1 -> protron, 0 -> electron
+istep=1;                                      ! ?
